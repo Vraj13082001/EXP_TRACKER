@@ -1,0 +1,96 @@
+﻿@model Mvc.Models.mvcExpenseModel
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+<body>
+    <br />
+    <div class="panel panel-primary">
+        <div class="panel-heading">Expense List</div>
+        <div class="panel-body">
+            @using (Html.BeginForm())
+            {
+                <div class="form-horizontal">
+                    @Html.HiddenFor(model => model.ExpenseId)
+                    <div class="form-group">
+                        <div class="control-label col-md-2">
+                            <b>
+                                @Html.LabelFor(model => model.Title)
+                            </b>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Title)
+                            @Html.ValidationMessageFor(model => model.Title)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">
+                            <b>
+                                @Html.LabelFor(model => model.Description)
+                            </b>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Description)
+                            @Html.ValidationMessageFor(model => model.Description)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">
+                            <b>
+                                @Html.LabelFor(model => model.Date)
+                            </b>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Date)
+                            @Html.ValidationMessageFor(model => model.Date)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">
+                            <b>
+                                @Html.LabelFor(model => model.Amount)
+                            </b>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Amount)
+                            @Html.ValidationMessageFor(model => model.Amount)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">
+                            <b>
+                                @Html.LabelFor(model => model.CategoryId)
+                            </b>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CategoryId)
+                            @Html.ValidationMessageFor(model => model.CategoryId)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Submit" class="btn btn-danger" />
+                            <input type="reset" value="Reset" class="btn btn-danger" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+}
+
+
+
+

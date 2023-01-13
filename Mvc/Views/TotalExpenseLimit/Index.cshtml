@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Mvc.Models.mvcTotalExpenseLimit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+
+<p>
+    <a href="@Url.Action("AddOrEdit", "TotalExpenseLimit")" class="btn btn-default> <span class="glyphicon glyphicon-pencil"></span>  Create New </a>
+</p>
+<table class="table table-striped">
+    <thead class="table-heading">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalExpenseId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalExpenseLimit1)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalExpenseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalExpenseLimit1)
+            </td>
+            <td>
+                <a href="@Url.Action("AddOrEdit","TotalExpenseLimit",new {id=item.TotalExpenseId})" class="btn btn-success"><span class="glyphicon glyphicon-exclamation-sign"></span> Edit</a>|
+                <a onclick="Delete(@item.TotalExpenseId)"  class="btn btn-danger"><i class="fa fa-trash"></i>  Delete</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+        function Delete(id) {
+            alertify.confirm('Expense Tracker','Are You Sure to Delete this Record ?',function(){
+                window.location.href = '@Url.Action("Delete","TotalExpenseLimit")/' + id;
+            },null );
+        }
+    </script>
+}
