@@ -1,9 +1,10 @@
 # EXP_TRACKER
 
-      Expense Tracker is a personal expense web application which is build in asp.net mvc architecture and api.This Web Application have many functionality like add category,add expenses,add total expense,and on the Dashboard the Total Expenses,Total Category,Total Limit is shown.Also When the User is select the particlar Category it will show the Expense details(Expense Id,Title,Amount) when user click on the particlar details it will be sorted order.At the time of Adding the Category,Expense,Total limit alert message is shown to the user.User can Delete and Edit the particlar Category,Expense,Total limit also shown the alert for the particular functionalities.
-      The application is developed in Visual Studio 2022.HTML,CSS,JavaScript,AlertifyJs(for alert).
+Expense Tracker is a personal expense web application which is build in asp.net mvc architecture and api.This Web Application have many functionality like add category,add expenses,add total expense,and on the Dashboard the Total Expenses,Total Category,Total Limit is shown.Also When the User is select the particlar Category it will show the Expense details(Expense Id,Title,Amount) when user click on the particlar details it will be sorted order.At the time of Adding the Category,Expense,Total limit alert message is shown to the user.User can Delete and Edit the particlar Category,Expense,Total limit also shown the alert for the particular functionalities.
+
+The application is developed in Visual Studio 2022.HTML,CSS,JavaScript,AlertifyJs(for alert).
       
- Pre requisites of Expense tracker web application are
+Pre requisites of Expense tracker web application are
  
 Visual studio 2022 Make sure you have got the right version i.e, .Net Framework 4.7.2 Entity framework 6.0 How to run the application: Since the application is built using Web Api and asp.net mvc The solution contains two projects one for web api and one for asp.net mvc. Firstly, download the solution and database. Make sure you keep the database name same as that mentioned in the models of the projects both mvc and api. Since entity framework version 6.0 is used.
 
